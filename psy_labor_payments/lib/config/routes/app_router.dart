@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 
+import '../../modules/dashboard/presentation/screen/dashboard_screen.dart';
 import '../../modules/start/presentation/screen/start_screen.dart';
 
 part 'app_router.gr.dart';
@@ -14,11 +15,11 @@ class AppRouter extends _$AppRouter {
           initial: true,
           children: [],
         ),
-        // AutoRoute(
-        //   page: DashboardRoute.page,
-        //   path: DashboardScreen.path,
-        //   children: [],
-        // ),
+        AutoRoute(
+          page: DashboardRoute.page,
+          path: DashboardScreen.path,
+          children: [],
+        ),
         // AutoRoute(
         //   page: EnterVehiclesRoute.page,
         //   path: EnterVehiclesScreen.path,
