@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:psy_labor_payments/shared/widgets/custom_appbar.dart';
 
+import '../../../../config/routes/app_router.dart';
+
 @RoutePage()
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -43,7 +45,8 @@ class DashboardScreen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.2,
                 ),
                 onTap: () {
-                  // Navigate to results screen
+                  // Navigate to CSV processing screen
+                  context.router.pushNamed('/csv');
                 },
               ),
             ],
@@ -73,13 +76,15 @@ class _DashboardTile extends StatelessWidget {
 
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
+      borderRadius:
+          BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
       child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.25,
         height: MediaQuery.of(context).size.height * 0.5,
         child: Material(
           color: onPrimaryContainer,
-          borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
+          borderRadius:
+              BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
           elevation: 2,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),
